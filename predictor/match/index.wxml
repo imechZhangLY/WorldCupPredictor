@@ -1,0 +1,32 @@
+<view class="container">
+	<view wx:if="{{match}}" class="match">
+		<view class="head">
+			{{match.group + ' '}}组
+		</view>
+		<view class="body">
+			<view class="group">
+				{{date}}
+			</view>
+			<view class="content">
+				<view>
+					<image class="flag" mode="widthFix" src="{{path+flags[0]+'.png'}}"></image>
+				</view>
+				<view class="score">
+					<input/>
+					:
+					<input/>
+				</view>
+				<view>
+					<image class="flag" mode="widthFix" src="{{path+flags[1]+'.png'}}"></image>
+				</view>
+			</view>
+			<view class="tips">
+				预测最多的比分是{{mostPopularPrediction[0]+" : "+mostPopularPrediction[1]}}
+			</view>
+		</view>
+		<view class="foot"></view>
+	</view>
+	<view>
+		<button>保存图片</button>
+	</view>
+</view>

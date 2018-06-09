@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "predictor/index/index",
+    "predictor/logs/logs",
+    "predictor/match/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view wx:for="{{matches}}" wx:for-item="match" class="match-title" data-match="{{match}}" bindtap="prediction">
+    <view class="flags">
+      <view class="home">
+        <image wx:if="{{flags}}" class="flag" mode="widthFix" src="{{folder+'a_'+flags[match['name'][0]]+'.png'}}"></image>
+      </view>
+      <view class="middle"><view class="vs">vs</view></view>
+      <view class="guest">
+        <image wx:if="{{flags}}" class="flag" mode="widthFix" src="{{folder+'a_'+flags[match['name'][1]]+'.png'}}"></image>
+      </view>
+    </view>
+    <view class="title">
+      <view class="head">
+        {{match['group']}}组{{match['name'][0]}}vs{{match['name'][1]}}
+      </view>
+      <view class="tip">
+        谁输谁赢，点击预测！
+      </view>
+    </view>
+    <view class="time">
+      <view class="day">{{match['time']['day']}}</view>
+      <view class="hour">{{match['time']['hour']}}</view>
+    </view>
+  </view>
+</view>
